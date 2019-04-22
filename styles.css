@@ -1,0 +1,14 @@
+body {
+    background-color: #2CE080;
+    font-size: 16px;
+}
+blockquote {
+    color: white;
+    font-size: 5rem;
+	border-style: solid;
+ 	padding: 5rem;
+}
+author {
+	font-size: 2rem;
+	font-style: italic;
+}
