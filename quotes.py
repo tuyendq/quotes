@@ -1,11 +1,11 @@
+# Run this command to read quotes.txt file and generate index.html file
+# $ python quotes.py quotes.txt index.html
+
 from sys import argv
 import random
 import csv
 
 script, file_quotes, file_html = argv
-
-# test first
-# print "arg1: %r, arg2: %r, arg3: %r" % (script, file_quotes, file_html)
 
 quote_content = ""
 quote_author = ""
@@ -13,40 +13,31 @@ quote_author = ""
 # Todo: add exception
 with open(file_quotes, 'r') as input_file:
 	contents = csv.reader(input_file, skipinitialspace=True)
-	print """===Print all==="""
-	count = 0
+
+	# Count number of quotes in file
+        count = 0
         for row in contents:
-		print row[0]
-		print row[1]
-		print """===""" 
                 count = count + 1
-        print "Number of quotes is: %i." % count
 
-
-	print """===Get a random quote==="""
+	# Get a random quote
 	random_number = random.randint(1, count)
-        print "The random_number is: %i." % random_number
 
-        # set count to 1
-        count = 1
         # Must rewind input_file to begin: byte 0th
         input_file.seek(0)
+        count = 1
         for row in contents:
             if count == random_number:
-                global quote_content
+                #global quote_content
                 quote_content = row[0]
-                print quote_content
-                global quote_author
+                #global quote_author
                 quote_author = row[1]
-                print quote_author
                 break
             else:
                 count = count + 1
-        print "The for look break when count is: %i." % count                
-print "Print to check global variables' values"
-print "Quote content: ", quote_content
-print "Quote author: ", quote_author
 
+# print "Print to check global variables' values"
+# print "Quote content: ", quote_content
+# print "Quote author: ", quote_author
 
 def create_html(file_html, quote_content, quote_author):
     """Create a html file with a random quote."""
