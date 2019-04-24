@@ -27,17 +27,11 @@ with open(file_quotes, 'r') as input_file:
         count = 1
         for row in contents:
             if count == random_number:
-                #global quote_content
                 quote_content = row[0]
-                #global quote_author
                 quote_author = row[1]
                 break
             else:
                 count = count + 1
-
-# print "Print to check global variables' values"
-# print "Quote content: ", quote_content
-# print "Quote author: ", quote_author
 
 def create_html(file_html, quote_content, quote_author):
     """Create a html file with a random quote."""
