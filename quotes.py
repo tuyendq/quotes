@@ -2,13 +2,25 @@
 # $ python quotes.py quotes.txt index.html
 
 from sys import argv
+import sys
 import random
 import csv
+
+# Todo: Check number of arguments and print usage syntax
+while True:
+    print len(argv)
+    if (len(argv) != 3):
+        print "Usage: python quotes.py quotes.txt index.html"
+        sys.exit(1)
+    else:
+        break
 
 script, file_quotes, file_html = argv
 
 quote_content = ""
 quote_author = ""
+bgcolors = ["00BA51","3B5998","1F70C1","A3AAAE","FF9900"]
+bgcolor = random.choice(bgcolors)
 
 # Todo: add exception
 with open(file_quotes, 'r') as input_file:
@@ -44,7 +56,7 @@ def create_html(file_html, quote_content, quote_author):
 		<title>What, Why, and How to practice habit?</title>
 		<link rel="stylesheet" href="styles.css">
 		</head>
-		<body>
+		<body style="background-color: #{bg_color};">
 		<center>
 		<blockquote>{quote_content}</blockquote>
 		<author>&mdash; {quote_author}</author>
@@ -52,7 +64,7 @@ def create_html(file_html, quote_content, quote_author):
 		</bofy>
 		</html>
 		"""
-    html_content = html_content.format(quote_content=quote_content, quote_author=quote_author)
+    html_content = html_content.format(bg_color=bgcolor, quote_content=quote_content, quote_author=quote_author)
 
     output_file = open(file_html, 'w')
     output_file.write(html_content)
