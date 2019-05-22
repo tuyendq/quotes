@@ -8,7 +8,6 @@ import csv
 
 # Todo: Check number of arguments and print usage syntax
 while True:
-    print len(argv)
     if (len(argv) != 3):
         print "Usage: python quotes.py quotes.txt index.html"
         sys.exit(1)
