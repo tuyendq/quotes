@@ -57,19 +57,21 @@ def create_html(file_html, quote_content, quote_author):
 		<title>What, Why, and How to practice habit?</title>
 
         <script async src="https://cdn.ampproject.org/v0.js"></script>
-
+		<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
 		<style amp-custom>
-            body {{background-color: #{bg_color}; font-size: 1rem;}}
+            body {{background-color: #{bg_color}; padding: 1rem;}}
             blockquote {{color: #FFFFFF; font-size: 3rem; border-style: solid; padding: 1rem;}}
-            .author {{font-size: 2rem; font-style: italic;}}
+            .author {{font-style: italic;}}
         </style>
         <style amp-boilerplate>body{{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}}@-webkit-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@-moz-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@-ms-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@-o-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}</style><noscript><style amp-boilerplate>body{{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}}</style></noscript>
 		</head>
 		<body>
+        <amp-fit-text width=100 height=50 layout="responsive">
 		<center>
-		<blockquote>{quote_content}</blockquote>
-		<p class="author">&mdash; {quote_author}</p>
+		<p>{quote_content}</p>
+		<span class="author">&mdash; {quote_author}</span>
 		</center>
+        </amp-fit-text>
 		</bofy>
 		</html>
 		"""
