@@ -24,11 +24,10 @@ bgcolor = random.choice(bgcolors)
 # Todo: add exception
 with open(file_quotes, 'r') as input_file:
 	contents = csv.reader(input_file, skipinitialspace=True)
-
 	# Count number of quotes in file
-        count = 0
-        for row in contents:
-                count = count + 1
+	count = 0
+	for row in contents:
+		count = count + 1
 
 	# Get a random quote
 	random_number = random.randint(1, count)
@@ -49,13 +48,23 @@ def create_html(file_html, quote_content, quote_author):
     # html template
     html_content = """
 		<!DOCTYPE html>
-		<html>
+		<html amp lang="en">
 		<head>
 		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <link rel="canonical" href="https://www.practicehabits.net/index.html">
 		<title>What, Why, and How to practice habit?</title>
-		<link rel="stylesheet" href="styles.css">
+
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+		<style amp-custom>
+            body {{background-color: #{bg_color}; font-size: 1rem;}}
+            blockquote {{color: #FFFFFF; font-size: 5rem; border-style: solid; padding: 5rem;}}
+            author {{font-size: 2rem; font-style: italic;}}
+        </style>
+        <style amp-boilerplate>body{{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}}@-webkit-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@-moz-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@-ms-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@-o-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}</style><noscript><style amp-boilerplate>body{{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}}</style></noscript>
 		</head>
-		<body style="background-color: #{bg_color};">
+		<body>
 		<center>
 		<blockquote>{quote_content}</blockquote>
 		<author>&mdash; {quote_author}</author>
