@@ -59,19 +59,33 @@ def create_html(file_html, quote_content, quote_author):
         <script async src="https://cdn.ampproject.org/v0.js"></script>
 		<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
 		<style amp-custom>
-            body {{background-color: #{bg_color}; padding: 1rem;}}
-            blockquote {{color: #FFFFFF; font-size: 3rem; border-style: solid; padding: 1rem;}}
+            body {{background-color: #{bg_color}; margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+				'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+				sans-serif;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;	}}
+            .app {{text-align: center;}}
+            .app-header {{	
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-size: calc(1rem + 4vmin);
+			color: white;
+			padding: 0 4rem;	
+			}}
             .author {{font-style: italic;}}
         </style>
         <style amp-boilerplate>body{{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}}@-webkit-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@-moz-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@-ms-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@-o-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}</style><noscript><style amp-boilerplate>body{{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}}</style></noscript>
 		</head>
 		<body>
-        <amp-fit-text width=100 height=50 layout="responsive">
-		<center>
-		<p>{quote_content}</p>
-		<span class="author">&mdash; {quote_author}</span>
-		</center>
-        </amp-fit-text>
+        <div class="app">
+            <header class="app-header">
+                <p>{quote_content}</p>
+                <p class="author">&mdash; {quote_author}</p>
+            </header>
+        </div>
 		</bofy>
 		</html>
 		"""
