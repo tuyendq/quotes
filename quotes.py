@@ -16,10 +16,24 @@ while True:
 
 script, file_quotes, file_html = argv
 
+def random_line(fname):
+    try:
+        lines = open(fname).read().splitlines()
+        return random.choice(lines)
+    except IOError:
+        print("An exception occurred while open file: " + fname)
+
 quote_content = ""
 quote_author = ""
 bgcolors = ["00BA51","3B5998","1F70C1","A3AAAE","FF9900"]
 bgcolor = random.choice(bgcolors)
+
+bgcolor = random_line('colors.txt')
+# In case cannot get bgcolor from file, get a random color from list
+if (bgcolor == None):
+    bgcolors = ["00BA51","3B5998","1F70C1","A3AAAE","FF9900"]
+    bgcolor = random.choice(bgcolors)
+
 
 # Todo: add exception
 with open(file_quotes, 'r') as input_file:
@@ -43,6 +57,13 @@ with open(file_quotes, 'r') as input_file:
             else:
                 count = count + 1
 
+# Use random_line function to get random quote from file
+# line = random_line('quotes.txt')
+# if (line != None):
+#     quote = line.split(',')
+#     quote_content = quote[0]
+#     quote_author = quote[1]
+
 def create_html(file_html, quote_content, quote_author):
     """Create a html file with a random quote."""
     # html template
@@ -54,10 +75,10 @@ def create_html(file_html, quote_content, quote_author):
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta name="description" content="Practice Habits: Hour of Quote"/>
         <link rel="canonical" href="https://www.practicehabits.net/">
+		<meta property="og:image" content="/practice-makes-habits-fbcover.png" />
 		<title>What, Why, and How to practice habit?</title>
 
         <script async src="https://cdn.ampproject.org/v0.js"></script>
-		<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
 		<style amp-custom>
             body {{background-color: #{bg_color}; margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 				'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -82,7 +103,7 @@ def create_html(file_html, quote_content, quote_author):
 		<body>
         <div class="app">
             <header class="app-header">
-                <p>{quote_content}</p>
+                <p class="quote">{quote_content}</p>
                 <p class="author">&mdash; {quote_author}</p>
             </header>
         </div>
