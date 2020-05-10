@@ -10,4 +10,3 @@ sed -i 1,8d color.txt
 # Remove duplicate
 uniq color.txt > colors.txt
 ```
-

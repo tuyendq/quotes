@@ -73,9 +73,9 @@ def create_html(file_html, quote_content, quote_author):
 		<head>
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-        <meta name="description" content="Practice Habits: Hour of Quote"/>
+        <meta name="description" content="Practice Habits: Quote of the Hour"/>
+        <meta property="og:image" content="/practice-makes-habits-fbcover.png" />
         <link rel="canonical" href="https://www.practicehabits.net/">
-		<meta property="og:image" content="/practice-makes-habits-fbcover.png" />
 		<title>What, Why, and How to practice habit?</title>
 
         <script async src="https://cdn.ampproject.org/v0.js"></script>
