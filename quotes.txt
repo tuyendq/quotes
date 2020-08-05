@@ -230,3 +230,4 @@
 "I will pray for guidance.","Og Mandino"
 "Discipline is the bridge between goals and accomplishment.","Jim Rohn"
 "The road to nowhere is paved with excuses.","Mark Bell"
+"We generate fears while we sit. We overcome them by action.","Unknown"
