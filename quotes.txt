@@ -231,3 +231,4 @@
 "Discipline is the bridge between goals and accomplishment.","Jim Rohn"
 "The road to nowhere is paved with excuses.","Mark Bell"
 "We generate fears while we sit. We overcome them by action.","Unknown"
+"Believing that we can improve through trial and error, through effort and practice is called a growth mindset.","Unknown"
