@@ -236,3 +236,4 @@
 "You are what you do, not what you say.","Unknown"
 "Everyone can be greate because everyone can serve.","Unknown"
 "The definition of insanity is doing the same thing over and over and expecting a different result.","Albert Einstein"
+"Luck is what happens when preparation meets opportunity.","Seneca"
