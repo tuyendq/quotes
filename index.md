@@ -6,4 +6,3 @@
 <cite>Soucre: https://www.goalcast.com/2018/01/16/most-inspiring-zig-ziglar-quotes/</cite>
 
 This Pages site use the layout and styles from the Jekyll theme.
-[editor on GitHub](https://github.com/tuyendq/quotes/edit/gh-pages/index.md
