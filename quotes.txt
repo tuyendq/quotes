@@ -238,3 +238,4 @@
 "The definition of insanity is doing the same thing over and over and expecting a different result.","Albert Einstein"
 "Luck is what happens when preparation meets opportunity.","Seneca"
 "I have not failed, but found 1000 ways to not make a light bulb.","Thomas Edison"
+"The capacity to learn is a gift; The ability to learn is a skill; The willingness to learn is a choice.","Brian Herbert"
