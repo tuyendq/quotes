@@ -239,3 +239,6 @@
 "Luck is what happens when preparation meets opportunity.","Seneca"
 "I have not failed, but found 1000 ways to not make a light bulb.","Thomas Edison"
 "The capacity to learn is a gift; The ability to learn is a skill; The willingness to learn is a choice.","Brian Herbert"
+"The joy of being is the joy of being conscious.","Eckhart Tolle"
+"We are all faced with a series of great opportunities brilliantly disguised as impossible situations.","Charles R. Swindoll"
+"Rather than being your thoughts and emotions, be the awareness behind them.","Eckhart Toller"
