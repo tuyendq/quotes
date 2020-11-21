@@ -237,3 +237,4 @@
 "Everyone can be greate because everyone can serve.","Unknown"
 "The definition of insanity is doing the same thing over and over and expecting a different result.","Albert Einstein"
 "Luck is what happens when preparation meets opportunity.","Seneca"
+"The basic difference between an ordinary man and a warior is that a warior takes everything as a challenge while an ordinary man takes everything as a blessing or a curse.","Don Juan"
