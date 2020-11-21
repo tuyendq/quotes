@@ -244,3 +244,6 @@
 "We are all faced with a series of great opportunities brilliantly disguised as impossible situations.","Charles R. Swindoll"
 "Rather than being your thoughts and emotions, be the awareness behind them.","Eckhart Toller"
 "SHOULD is a victim word. COULD is a player word.","Fred Kofman"
+"What can I do now?","Fred Kofman"
+"What lesson can I learn?","Fred Kofman"
+"Stop. Think. How do I want to respond?","Fred Kofman"
