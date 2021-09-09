@@ -292,3 +292,5 @@
 "You become what you think about.","Napoleon Hill"
 "To be a star, you must shine your own light, follow your own path, and don't worry about darkness, for that is when the stars shine brightest.","Napoleon Hill" 
 "Whatever your mind can conceive and believe, it can achieve.","Napoleon Hill"
+"Find a job you enjoy doing, and you will never have to work a day in your life.","Mark Twain"
+"If you do what you love, you'll never work a day in your life.","Marc Anthony"
