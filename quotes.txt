@@ -248,3 +248,4 @@
 "What lesson can I learn?","Fred Kofman"
 "Stop. Think. How do I want to respond?","Fred Kofman"
 "What challenge am I facing now?","Fred Kofman"
+"Risk is not knowing what you are doing.","Warren Buffett"
